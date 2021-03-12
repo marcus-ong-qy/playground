@@ -15,11 +15,11 @@ base = 100
 y = base
 
 
-def animate(i):
+def animate(i, y):
     global y
     x_values.append(next(index))
     y_values.append(y)
-    perc = 1 + random.randint(-100, 101)/1000
+    perc = 1 + random.randint(-100, 105)/1000
     y *= perc if perc != 0 else None
     plt.cla()  # clears plots
     plt.plot(x_values, y_values)
