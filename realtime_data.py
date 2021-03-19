@@ -15,7 +15,7 @@ base = 100
 y = base
 
 
-def animate(i, y):
+def animate(i):
     global y
     x_values.append(next(index))
     y_values.append(y)

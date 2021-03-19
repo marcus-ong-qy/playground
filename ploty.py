@@ -2,8 +2,10 @@ import plotly.graph_objects as go
 
 import numpy as np
 
+# https://plotly.com/python/animations/
+
 # Generate curve data
-t = np.linspace(1, 100, 100)
+t = np.linspace(1, 100, 100)  # static line plot
 x = t
 y = t
 xm = np.min(x) - 1.5
@@ -11,10 +13,9 @@ xM = np.max(x) + 1.5
 ym = np.min(y) - 1.5
 yM = np.max(y) + 1.5
 N = 100
-s = np.linspace(1, 100, N)
+s = np.linspace(1, 100, N)  # animated plot along line
 xx = s
 yy = s
-
 
 # Create figure
 fig = go.Figure(
@@ -37,9 +38,9 @@ fig = go.Figure(
             x=[xx[k]],
             y=[yy[k]],
             mode="markers",
-            marker=dict(color="red", size=10))])
+            marker=dict(color="red", size=10))]) # each Frame is one plot
 
-        for k in range(N)]
+        for k in range(N)]  # list of Frame objects
 )
 
 fig.show()
